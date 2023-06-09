@@ -13,7 +13,7 @@ const Questions = () => {
       <span> </span>
     </span>
   ))
-
+  const data = ['법 제정의 공론화를 촉구하기 위해','법 제정의 반대 근거를 제시하기 위해','법 시행의 피해 사례를 알려 주기 위해','법 시행의 적절한 시기를 제안하기 위해']
   const firstQuestion = 'Q48. 필자가 이 글을 쓴 목적을 고르십시오.'
   const secondQuestion = 'Q49. (     )에 들어갈 내용으로 알맞은 것을 고르십시오.'
   const thirdQuestion = 'Q50. 밑줄 친 부분에 나타난 필자의 태도로 알맞은 것을 고르십시오.'
@@ -26,7 +26,7 @@ const Questions = () => {
             {separateText}
           </p>
         </div>
-          <QuestionComponent firstQuestion={firstQuestion}/>
+          <QuestionComponent firstQuestion={firstQuestion} data={data}/>
         <div className='flex flex-col gap-5'>
           <h3>{secondQuestion}</h3>
           <div className='flex gap-3'>
@@ -66,7 +66,7 @@ const Questions = () => {
           </div>
         </div>
         <div className='flex justify-end w-full'>
-          <button onClick={() => console.log(clicked)} 
+          <button
           className="bg-amber-300 rounded-full py-3 px-10 shadow-md shadow-amber-500 text-white font-semibold hover:shadow-xl duration-500">Next Question</button>
         </div>
       </div>
